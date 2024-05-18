@@ -19,7 +19,7 @@ class LemburCalculatorWithIfElse {
     public static void main(String[] args) {
 
         // Deklarasi Local Variable
-        String Karyawan;
+        String GolKaryawan;
         int LamaLembur = 0;
         boolean ValidationCheck = false;
 
@@ -27,14 +27,14 @@ class LemburCalculatorWithIfElse {
         do {
             System.out.println("Silakan Masukkan Golongan Karyawan Anda");
             System.out.print("Jawaban Hanya Berupa A/B/C: ");
-            Karyawan = SCAN.nextLine();
+            GolKaryawan = SCAN.nextLine();
 
         // Fungsi Validasi Masukan Pengguna (Opsional)
-        } while (!Karyawan.equalsIgnoreCase("A") && !Karyawan.equalsIgnoreCase("B") && !Karyawan.equalsIgnoreCase("C"));
+        } while (!GolKaryawan.equalsIgnoreCase("A") && !GolKaryawan.equalsIgnoreCase("B") && !GolKaryawan.equalsIgnoreCase("C"));
 
         // Meminta Masukan Lama Lembur Pengguna
         do {
-            System.out.print("Berapa Lama Lembur Anda Hari Ini (Dalam Hitungan 1-5 Jam)?: ");
+            System.out.print("Berapa Lama Anda Lembur Hari Ini (Dalam Hitungan 1-5 Jam)?: ");
 
             // Fungsi Validasi Masukan Pengguna (Opsional)
             if (SCAN.hasNextInt()) {
@@ -47,7 +47,7 @@ class LemburCalculatorWithIfElse {
         } while (!ValidationCheck);
 
         // Memanggil Method Untuk Menghitung Gaji Karyawan Berdasarkan Golongan Dan Lama Lembur
-        TotalGajiKaryawan(Karyawan, LamaLembur);
+        TotalGajiKaryawan(GolKaryawan, LamaLembur);
     }
 
     public static void TotalGajiKaryawan(String s, int i) {
@@ -63,32 +63,32 @@ class LemburCalculatorWithIfElse {
                 BONUS_LEMBUR = GAJI_A * 0.3;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur 1 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             } else if (i == 2) {
                 BONUS_LEMBUR = GAJI_A * 0.32;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur 2 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             } else if (i == 3) {
                 BONUS_LEMBUR = GAJI_A * 0.34;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur 3 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             } else if (i == 4) {
                 BONUS_LEMBUR = GAJI_A * 0.36;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur 4 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             } else if (i >= 5) {
                 BONUS_LEMBUR = GAJI_A * 0.38;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur 5 Jam Atau Lebih: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             } else {
                 BONUS_LEMBUR = 0;
                 System.out.println("Gaji Pokok Golongan A: " + IDR.format(GAJI_A));
                 System.out.println("Bonus Lembur: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_A + BONUS_LEMBUR)));
             }
 
         // Jika Karyawan Termasuk Golongan B
@@ -99,32 +99,32 @@ class LemburCalculatorWithIfElse {
                 BONUS_LEMBUR = GAJI_B * 0.3;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur 1 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             } else if (i == 2) {
                 BONUS_LEMBUR = GAJI_B * 0.32;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur 2 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             } else if (i == 3) {
                 BONUS_LEMBUR = GAJI_B * 0.34;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur 3 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             } else if (i == 4) {
                 BONUS_LEMBUR = GAJI_B * 0.36;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur 4 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             } else if (i >= 5) {
                 BONUS_LEMBUR = GAJI_B * 0.38;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur 5 Jam Atau Lebih: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             } else {
                 BONUS_LEMBUR = 0;
                 System.out.println("Gaji Pokok Golongan B: " + IDR.format(GAJI_B));
                 System.out.println("Bonus Lembur: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_B + BONUS_LEMBUR)));
             }
 
         // Jika Karyawan Termasuk Golongan C
@@ -135,32 +135,32 @@ class LemburCalculatorWithIfElse {
                 BONUS_LEMBUR = GAJI_C * 0.3;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur 1 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             } else if (i == 2) {
                 BONUS_LEMBUR = GAJI_C * 0.32;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur 2 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             } else if (i == 3) {
                 BONUS_LEMBUR = GAJI_C * 0.34;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur 3 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             } else if (i == 4) {
                 BONUS_LEMBUR = GAJI_C * 0.36;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur 4 Jam: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             } else if (i >= 5) {
                 BONUS_LEMBUR = GAJI_C * 0.38;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur 5 Jam Atau Lebih: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             } else {
                 BONUS_LEMBUR = 0;
                 System.out.println("Gaji Pokok Golongan C: " + IDR.format(GAJI_C));
                 System.out.println("Bonus Lembur: " + IDR.format(BONUS_LEMBUR));
-                System.out.println("Total Penghasilan Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
+                System.out.println("Total Gaji Anda: " + IDR.format((GAJI_C + BONUS_LEMBUR)));
             }
         }
     }
