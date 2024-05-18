@@ -1,0 +1,47 @@
+TITLE LemburCalculatorWithIfElse
+
+BEGIN
+
+VAR
+String GolKaryawan
+int LamaLembur
+double GajiKaryawan, BonusLembur, TotalGaji
+
+CONST
+double GAJI_A = 5000000,
+       GAJI_B = 6500000,
+       GAJI_C = 9500000
+
+DISPLAY “Silakan Masukkan Golongan Karyawan Anda (A/B/C): ”
+INPUT GolKaryawan
+DISPLAY "Berapa Lama Anda Lembur Hari Ini (Dalam Hitungan 1-5 Jam)?: "
+INPUT LamaLembur
+
+IF (GolKaryawan == A) THEN
+  GajiKaryawan = GAJI_A
+ELSE IF (GolKaryawan == B) THEN
+  GajiKaryawan = GAJI_B
+ELSE
+  GajiKaryawan = GAJI_C
+ENDIF
+
+IF (LamaLembur == 1) THEN
+  BonusLembur = GajiKaryawan * 0.3
+ELSE IF (LamaLembur == 2) THEN
+  BonusLembur = GajiKaryawan * 0.32
+ELSE IF (LamaLembur == 3) THEN
+  BonusLembur = GajiKaryawan * 0.34
+ELSE IF (LamaLembur == 4) THEN
+  BonusLembur = GajiKaryawan * 0.36
+ELSE IF (LamaLembur >= 5) THEN
+  BonusLembur = GajiKaryawan * 0.38
+ELSE
+  BonusLembur = 0
+ENDIF
+
+TotalGaji = GajiKaryawan + BonusLembur
+
+DISPLAY “Anda Golongan Karyawan: “ + GolKaryawan
+DISPLAY "Gaji Pokok Anda: " + GajiKaryawan
+DISPLAY “Bonus Lembur Anda: “ + BonusLembur
+DISPLAY “Total Gaji Anda: “ + TotalGaji
